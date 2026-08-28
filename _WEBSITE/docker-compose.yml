@@ -4,7 +4,7 @@ services:
     container_name: latechsmp-website
     restart: unless-stopped
     ports:
-      - "4173:80"
+      - "3000:80"
     volumes:
       # Mount the stable SITE root (not ./out directly) - `npm run build` deletes and
       # recreates `out/` from scratch on every build, which would otherwise leave a
