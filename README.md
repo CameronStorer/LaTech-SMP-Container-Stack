@@ -1,7 +1,11 @@
 # LaTech SMP Technology Stack
 
+The full docker container stack for the [Louisiana Tech University Minecraft sever](https://latechsmp.net).
 
-| ## Recommended Plugins: |
+
+
+
+| **Recommended Plugins:** |
 | ------------------------ |
 | AntiSeedCracker |
 | ChestShop |
