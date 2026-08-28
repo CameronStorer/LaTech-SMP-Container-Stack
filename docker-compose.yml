@@ -1,4 +1,6 @@
 services:
+
+  # MC Server World Config
   latechsmp-survival:
     build: .
     container_name: latechsmp-survival
@@ -10,13 +12,10 @@ services:
       MEMORY: "16G"
       USE_AIKAR_FLAGS: "true"
       CREATE_CONSOLE_IN_PIPE: "true"
-#      TS_AUTHKEY: ${TS_AUTHKEY}
-#      SECRET_KEY: ${SECRET_KEY}
     ports:
       - "25565:25565/tcp"
       - "24454:24454/udp"
     #  - "25565:25565/udp"
-
     volumes:
       - ./data:/data
     devices:
@@ -27,7 +26,7 @@ services:
     networks:
       - mc_network
 
-
+  # viaproxy for version compatibility and geyser support
   latechsmp-viaproxy:
     image: ghcr.io/viaversion/viaproxy:latest
     container_name: latechsmp-viaproxy
@@ -35,14 +34,13 @@ services:
       - ./viaproxy-data:/app/run
     ports:
       - "25565:19132/udp"     # Bedrock clients connect here via Geyser-ViaProxy plugin, mapped to host 25565
-    #  - "25566:25565/tcp"     # Java clients connect here, ViaProxy forwards to latech_survival:25566
     depends_on:
       - latechsmp-survival
     networks:
       - mc_network
     restart: unless-stopped
 
-
+  # playit.gg support to allow for tunneling the server
   latechsmp-playit:
     image: ghcr.io/playit-cloud/playit-agent:latest
     network_mode: host
@@ -50,15 +48,11 @@ services:
     depends_on:
       - latechsmp-survival
     environment:
-      - SECRET_KEY=REMOVED
+      # in order to use a playit tunnel, you will need to acquire a token
+      - SECRET_KEY={PLAYIT_SECRET_TOKEN}
     restart: unless-stopped
 
 
 networks:
   mc_network:
     driver: bridge
-
-volumes:
-  mcdata:
-  db:
-  tailscale-state:
