@@ -26,7 +26,7 @@ Once the container's successfully running, simply launch the chosen Minecraft ve
 
 ## Aditional Content
 
-Noticibly, there are commented blocks in the ``docker-compose.yml`` file along with other folders in this repository containing config files. These areas present the opportunity for setting up server tunneling (accessing your server outside your home network), adding easy Bedrock Edition support, configuring a Discord bot, hosting a custom website, and more.
+Noticibly, there are commented blocks in the ``docker-compose.yml`` file, along with other folders in this repository containing config files. These areas present opportunities for server tunneling (accessing your server outside your home network), adding Bedrock Edition support, integrating a Discord bot, hosting a custom website, and more. Experimenting with the compose files will yield best results and understandings.
 
 
 ## Plugins
