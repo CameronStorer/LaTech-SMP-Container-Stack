@@ -41,16 +41,16 @@ services:
     restart: unless-stopped
 
   # playit.gg support to allow for tunneling the server
-  latechsmp-playit:
-    image: ghcr.io/playit-cloud/playit-agent:latest
-    network_mode: host
-    container_name: latechsmp-playit
-    depends_on:
-      - latechsmp-survival
-    environment:
-      # in order to use a playit tunnel, you will need to acquire a token
-      - SECRET_KEY={PLAYIT_SECRET_TOKEN}
-    restart: unless-stopped
+#  latechsmp-playit:
+#    image: ghcr.io/playit-cloud/playit-agent:latest
+#    network_mode: host
+#    container_name: latechsmp-playit
+#    depends_on:
+#      - latechsmp-survival
+#    environment:
+#      # in order to use a playit tunnel, you will need to acquire a token
+#      - SECRET_KEY={PLAYIT_SECRET_TOKEN}
+#    restart: unless-stopped
 
 
 networks:
