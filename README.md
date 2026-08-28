@@ -1,6 +1,6 @@
 # LaTech SMP Container Stack
 
-The full docker container stack for the [Louisiana Tech University Minecraft sever](https://latechsmp.net). 
+The full docker container stack for the [Louisiana Tech University Minecraft sever](https://latechsmp.net). Created by Cameron Storer, homelabber since 2023, this container fleet is tried and true for server stability and fun times. 
 
 Containers available from this config include: 
 
@@ -13,7 +13,7 @@ Containers available from this config include:
 
 ## Instructions
 
-Created by Cameron Storer, homelabber since 2023, this container fleet is tried and true for server stability and fun times. To utilize this container stack on your machine:
+To utilize this container stack on your machine:
 
 1. Pull the repo ``git clone https://github.com/CameronStorer/LaTechSMP.net.git``
 2. Execute the root container ``docker compose up -d``
