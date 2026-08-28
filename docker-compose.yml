@@ -27,18 +27,18 @@ services:
       - mc_network
 
   # viaproxy for version compatibility and geyser support
-  latechsmp-viaproxy:
-    image: ghcr.io/viaversion/viaproxy:latest
-    container_name: latechsmp-viaproxy
-    volumes:
-      - ./viaproxy-data:/app/run
-    ports:
-      - "25565:19132/udp"     # Bedrock clients connect here via Geyser-ViaProxy plugin, mapped to host 25565
-    depends_on:
-      - latechsmp-survival
-    networks:
-      - mc_network
-    restart: unless-stopped
+#  latechsmp-viaproxy:
+#    image: ghcr.io/viaversion/viaproxy:latest
+#    container_name: latechsmp-viaproxy
+#    volumes:
+#      - ./viaproxy-data:/app/run
+#    ports:
+#      - "25565:19132/udp"     # Bedrock clients connect here via Geyser-ViaProxy plugin, mapped to host 25565
+#    depends_on:
+#      - latechsmp-survival
+#    networks:
+#      - mc_network
+#    restart: unless-stopped
 
   # playit.gg support to allow for tunneling the server
 #  latechsmp-playit:
