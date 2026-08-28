@@ -1,4 +1,4 @@
-# LaTech SMP Container Stack
+<h1><img src="_WEBSITE/public/logo.webp" width="35"> LaTech SMP Container Stack <img src="_WEBSITE/public/logo.webp" width="35"></h1>
 
 The full docker container stack for the [Louisiana Tech University Minecraft sever](https://latechsmp.net). Created by Cameron Storer, homelabber since 2023, this container fleet is tried and true for server stability and fun times. 
 
@@ -24,14 +24,16 @@ To ensure that that the Minecraft server is running properly run ``docker compos
 
 Once the container's successfully running, simply launch the chosen Minecraft version (determined in the ``docker-compose.yml`` config file) and type in your server's IP address and chosen port number (which will look similar to ``192.168.1.11:25565``) to join your local Minecraft server.
 
-## Aditional Content
+## Additional Content
 
-Noticibly, there are commented blocks in the ``docker-compose.yml`` file, along with other folders in this repository containing config files. These areas present opportunities for server tunneling (accessing your server outside your home network), adding Bedrock Edition support, integrating a Discord bot, hosting a custom website, and more. Experimenting with the compose files will yield best results and understandings.
+Noticeably, there are commented blocks in the ``docker-compose.yml`` file, along with other folders in this repository containing config files. These areas present opportunities for server tunneling (accessing your server outside your home network), adding Bedrock Edition support, integrating a Discord bot, hosting a custom website, and more. Experimenting with the compose files will yield best results and understandings.
 
 
 ## Plugins
 
 For the most optimal vanilla survival experience, I suggest installing these plugins on your server to prevent undesired greifing, prevent hacking, and protect your world. There are also plugins listed here that add functional **economy** and **auction house** systems.
+
+
 
 | **Name** | **Description** |
 | ------------------------ | - |
