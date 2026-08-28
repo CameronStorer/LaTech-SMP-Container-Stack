@@ -1,0 +1,7 @@
+services:
+  bot:
+    build: .
+    container_name: latechsmp-discord-role-bot
+    restart: unless-stopped
+    volumes:
+      - /srv/PERSONAL/LATECHSMP/data/plugins/DiscordSRV/config.yml:/discordsrv-config.yml:ro

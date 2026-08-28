@@ -1,0 +1,23 @@
+services:
+
+  latechsmp-daily-reward-midnight-reset:
+    build: .
+    container_name: latechsmp-daily-reward-midnight-reset
+    restart: unless-stopped
+    environment:
+      - RCON_HOST=latech_survival
+      - RCON_PORT=25575
+      - RCON_PASSWORD=REMOVED
+      - TZ=America/Chicago
+    volumes:
+      # Read-only - never writes into the Minecraft server's own data,
+      # only reads the current player list.
+      - /srv/PERSONAL/LATECHSMP/data/plugins/DailyRewards/userdata:/dailyrewards-userdata:ro
+      - /srv/PERSONAL/LATECHSMP/data/usercache.json:/mc-data/usercache.json:ro
+    networks:
+      - mc_network
+
+networks:
+  mc_network:
+    external: true
+    name: latechsmp_mc_network

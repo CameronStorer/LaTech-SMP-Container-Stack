@@ -1,0 +1,28 @@
+services:
+
+  latechsmp-daily-bonus-watcher-bot:
+    build: .
+    container_name: latechsmp-daily-bonus-watcher-bot
+    restart: unless-stopped
+    environment:
+      - RCON_HOST=latech_survival
+      - RCON_PORT=25575
+      - RCON_PASSWORD=REMOVED
+      - TZ=America/Chicago
+    volumes:
+      # Read-only - this container only ever tails the log, never writes
+      # into the Minecraft server's own data.
+      - /srv/PERSONAL/LATECHSMP/data/logs:/mc-logs:ro
+      # Its own claims.json (who already got today's bonus) - separate from
+      # the Minecraft server's own data directory since this state belongs
+      # to this service, not to Essentials/the MC server itself.
+      - ./data:/data
+    networks:
+      - default
+      - mc_network
+
+networks:
+  default: {}
+  mc_network:
+    external: true
+    name: latechsmp_mc_network

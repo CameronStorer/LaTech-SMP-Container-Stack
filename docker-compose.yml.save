@@ -1,0 +1,63 @@
+services:
+  latechsmp-survival:
+    build: .
+    container_name: latechsmp-survival
+    environment:
+      EULA: "true"
+      TYPE: PURPUR
+      VERSION: "26.2"
+      TZ: "America/Chicago"
+      MEMORY: "16G"
+      USE_AIKAR_FLAGS: "true"
+      CREATE_CONSOLE_IN_PIPE: "true"
+#      TS_AUTHKEY: ${TS_AUTHKEY}
+#      SECRET_KEY: ${SECRET_KEY}
+    ports:
+      - "25565:25565/tcp"
+      - "24454:24454/udp"
+    #  - "25565:25565/udp"
+
+    volumes:
+      - ./data:/data
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    networks:
+      - mc_network
+
+
+  latechsmp-viaproxy:
+    image: ghcr.io/viaversion/viaproxy:latest
+    container_name: latviaproxy
+    volumes:
+      - ./viaproxy-data:/app/run
+    ports:
+      - "25565:19132/udp"     # Bedrock clients connect here via Geyser-ViaProxy plugin, mapped to host 25565
+    #  - "25566:25565/tcp"     # Java clients connect here, ViaProxy forwards to latech_survival:25566
+    depends_on:
+      - latech_survival
+    networks:
+      - mc_network
+    restart: unless-stopped
+
+
+  playit:
+    image: ghcr.io/playit-cloud/playit-agent:latest
+    network_mode: host
+    depends_on:
+      - latech_survival
+    environment:
+      - SECRET_KEY=REMOVED
+    restart: unless-stopped
+
+
+networks:
+  mc_network:
+    driver: bridge
+
+volumes:
+  mcdata:
+  db:
+  tailscale-state:

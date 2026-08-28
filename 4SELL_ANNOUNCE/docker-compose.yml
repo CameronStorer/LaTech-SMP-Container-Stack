@@ -1,0 +1,15 @@
+services:
+
+  latechsmp-sell-announce-bot:
+    build: .
+    container_name: latechsmp-sell-announce-bot
+    restart: unless-stopped
+    environment:
+      # Same bot identity DiscordSRV itself posts as, and the same "global"
+      # channel other DiscordSRV messages (join/leave/achievement) go to -
+      # see DiscordSRV/config.yml's BotToken and Channels map.
+      - DISCORD_BOT_TOKEN=REMOVED
+      - DISCORD_CHANNEL_ID=REMOVED
+    volumes:
+      - /srv/PERSONAL/LATECHSMP/data/logs:/mc-logs:ro
+      - /srv/PERSONAL/LATECHSMP/data/usercache.json:/mc-data/usercache.json:ro
