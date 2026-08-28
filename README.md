@@ -2,6 +2,7 @@
 
 
 | **Recommended Plugins:** |
+| ------------------------ |
 | AntiSeedCracker |
 | ChestShop |
 | Chunky |
