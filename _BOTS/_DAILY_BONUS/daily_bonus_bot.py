@@ -9,7 +9,7 @@ from zoneinfo import ZoneInfo
 
 LOG_PATH = "/mc-logs/latest.log"
 STATE_PATH = "/data/claims.json"
-RCON_HOST = os.environ.get("RCON_HOST", "latech_survival")
+RCON_HOST = os.environ.get("RCON_HOST", "latechsmp-survival")
 RCON_PORT = int(os.environ.get("RCON_PORT", "25575"))
 RCON_PASSWORD = os.environ["RCON_PASSWORD"]
 # Matches the daily kit's payout in plugins/Essentials/kits.yml - kept as
