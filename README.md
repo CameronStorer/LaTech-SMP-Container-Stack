@@ -1,4 +1,4 @@
-<h1><img src="_WEBSITE/public/logo.webp" width="35"> LaTech SMP Container Stack <img src="_WEBSITE/public/logo.webp" width="35"></h1>
+<h1 align="center"><img src="_WEBSITE/public/logo.webp" width="35"> LaTech SMP Container Stack <img src="_WEBSITE/public/logo.webp" width="35"></h1>
 
 The full docker container stack for the [Louisiana Tech University Minecraft sever](https://latechsmp.net). Created by Cameron Storer, homelabber since 2023, this container fleet is tried and true for server stability and fun times. 
 
