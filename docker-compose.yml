@@ -49,7 +49,7 @@ services:
 #      - latechsmp-survival
 #    environment:
 #      # in order to use a playit tunnel, you will need to acquire a token
-#      - SECRET_KEY={PLAYIT_SECRET_TOKEN}
+#      - SECRET_KEY=${PLAYIT_SECRET}
 #    restart: unless-stopped
 
 

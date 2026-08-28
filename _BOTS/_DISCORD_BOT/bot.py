@@ -10,40 +10,14 @@ import discord
 from discord import app_commands
 
 CONFIG_PATH = "/discordsrv-config.yml"
-GUILD_ID = REMOVED
+GUILD_ID = 
 
 MAJOR_ROLES = {
-    "Computer Science": REMOVED,
-    "Mechanical Engineer": 1440626667746758707,
-    "Civil Engineer": 1440626707815071858,
-    "Electrical Engineer": 1440626743311339532,
-    "Chemical Engineer": 1440626842074742945,
-    "Cyber Engineer": 1440626887297597522,
-    "Biology": 1440626949415370817,
-    "Forestry": 1440627029023133817,
-    "Nursing": 1440627071197122621,
-    "Psychology": 1440627177556148264,
-    "Animal Science": 1440627221906853919,
-    "Health Science": 1440627258552483903,
-    "Accounting": 1440627363305226381,
-    "Business Admin": 1440627427016708178,
-    "Marketing": 1440627472805793893,
-    "Finance": 1440627516128624681,
-    "Supply Chain Management": 1440627560038924380,
-    "Liberal Arts": 1440627671917924453,
-    "Education": 1440627705736466483,
-    "English": 1440627758148358204,
-    "History": 1440627799202336778,
-    "Political Science": 1440627837517430946,
-    "Graphic Design": 1440627891506253844,
+    
 }
 
 YEAR_ROLES = {
-    "Freshman": REMOVED,
-    "Sophomore": 1440628087002890270,
-    "Junior": 1440628134105055255,
-    "Senior": 1440628253483204668,
-    "Graduated": 1440629920299618314,
+    
 }
 
 

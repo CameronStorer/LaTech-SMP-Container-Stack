@@ -8,8 +8,8 @@ services:
       # Same bot identity DiscordSRV itself posts as, and the same "global"
       # channel other DiscordSRV messages (join/leave/achievement) go to -
       # see DiscordSRV/config.yml's BotToken and Channels map.
-      - DISCORD_BOT_TOKEN=REMOVED
-      - DISCORD_CHANNEL_ID=REMOVED
+      - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
+      - DISCORD_CHANNEL_ID=${DISCORD_CHANNEL_ID}
     volumes:
-      - /srv/PERSONAL/LATECHSMP/data/logs:/mc-logs:ro
-      - /srv/PERSONAL/LATECHSMP/data/usercache.json:/mc-data/usercache.json:ro
+      - ../../data/logs:/mc-logs:ro
+      - ../../data/usercache.json:/mc-data/usercache.json:ro

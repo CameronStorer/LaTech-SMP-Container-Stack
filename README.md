@@ -15,8 +15,8 @@ Containers available from this config include:
 
 To utilize this container stack on your machine:
 
-1. Pull the repo ``git clone https://github.com/CameronStorer/LaTechSMP.net.git``
-2. Execute the root container ``docker compose up -d``
+1. Clone the repo ``git clone https://github.com/CameronStorer/LaTech-SMP-Container-Stack.git``
+2. Execute the root Docker container ``docker compose up -d``
 
 After running those two commands, you should see a data folder appear locally. This folder will contain all of your server configurations, including plugins, worlds, instance jar. After a few seconds of initialization, you should see the that the server has successfully spun up and created your first world!
 
