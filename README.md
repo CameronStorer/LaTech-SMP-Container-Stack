@@ -33,7 +33,7 @@ Noticibly, there is a commented block in the ``docker-compose.yml`` file
 
 For the most optimal vanilla survival experience, I suggest installing these mods on your server to prevent undesired greifing, prevent hacking, and protect your world. There are also plugins listed here that add functional **economy** and **auction house** systems.
 
-| **Recommended Plugins:**     |
+| **Recommended Plugins:** |   |
 | ------------------------ | - |
 | AntiSeedCracker | Attempt to prevent player seed detection |
 | ChestShop | Required by other plugins |
