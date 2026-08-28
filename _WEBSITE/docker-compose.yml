@@ -1,0 +1,22 @@
+services:
+  web:
+    image: nginx:alpine
+    container_name: latechsmp-website
+    restart: unless-stopped
+    ports:
+      - "4173:80"
+    volumes:
+      # Mount the stable SITE root (not ./out directly) - `npm run build` deletes and
+      # recreates `out/` from scratch on every build, which would otherwise leave a
+      # directly-mounted ./out bind mount pointing at a stale/deleted inode until the
+      # container restarts. The parent directory itself is never replaced, so this
+      # mount stays valid across rebuilds with no restart needed.
+      - .:/site:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./public-data:/usr/share/nginx/data:ro
+    networks:
+      - proxy-network
+
+networks:
+  proxy-network:
+    external: true

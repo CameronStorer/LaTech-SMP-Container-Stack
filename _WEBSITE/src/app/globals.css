@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --tech-blue: #002F8B;
+  --tech-red:  #E31B23;
+
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+
+
+/* In your global stylesheet (e.g., globals.css) */
+.tiled-bg-blue {
+  /* Set the URL for your tile image */
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), /* Adjust '0.5' for darkness (0.0 to 1.0) */
+    url('../../public/BLUE.webp');
+  
+  /* Tell the browser to repeat the image both horizontally and vertically.
+     'repeat' is the default, but it's good practice to be explicit. */
+  background-repeat: repeat;
+  
+  /* Ensure the background image covers the entire element without distortion */
+  background-size: 60%; 
+  
+  /* Fallback color in case the image doesn't load */
+  background-color: #0a1cbb; 
+}
+
+/* In your global stylesheet (e.g., globals.css) */
+.tiled-bg-black {
+  /* Set the URL for your tile image */
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), /* Adjust '0.5' for darkness (0.0 to 1.0) */
+    url('../../public/BLACK.webp');
+  
+  /* Tell the browser to repeat the image both horizontally and vertically.
+     'repeat' is the default, but it's good practice to be explicit. */
+  background-repeat: repeat;
+  
+  /* Ensure the background image covers the entire element without distortion */
+  background-size: 60%; 
+  
+  /* Fallback color in case the image doesn't load */
+  background-color: #0a1cbb; 
+}
+
+@keyframes trophy-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(120vh) rotate(25deg);
+  }
+}
+
+.animate-trophy-fall {
+  animation-name: trophy-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* A trophy scooped up and thrown in the cursor's direction of travel, launching with
+   velocity that mirrors how fast the mouse was moving, then decelerating to a stop
+   (the timing curve does the "slowing down" - like friction) before fading out. A
+   little extra downward drift is baked into --throw-dy for a subtle gravity arc. */
+@keyframes trophy-throw {
+  0% {
+    transform: translate(-50%, -50%) translate(0, 0) rotate(0deg) scale(1);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(var(--throw-dx, 0px), calc(var(--throw-dy, 0px) + 50px)) rotate(var(--throw-rotate, 0deg)) scale(0.45);
+    opacity: 0;
+  }
+}
+
+.animate-trophy-throw {
+  animation-name: trophy-throw;
+  animation-duration: 0.75s;
+  /* Fast out of the gate, then decelerating hard - mimics initial velocity + friction. */
+  animation-timing-function: cubic-bezier(0.1, 0.8, 0.25, 1);
+  animation-fill-mode: forwards;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
