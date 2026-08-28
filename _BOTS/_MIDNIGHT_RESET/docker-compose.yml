@@ -7,7 +7,8 @@ services:
     environment:
       - RCON_HOST=latechsmp-survival
       - RCON_PORT=25575
-      - RCON_PASSWORD=REMOVED
+      # update this field for usage
+      - RCON_PASSWORD=
       - TZ=America/Chicago
     volumes:
       # Read-only - never writes into the Minecraft server's own data,

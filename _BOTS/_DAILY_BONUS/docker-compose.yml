@@ -7,7 +7,8 @@ services:
     environment:
       - RCON_HOST=latechsmp-survival
       - RCON_PORT=25575
-      - RCON_PASSWORD=REMOVED
+      # Required for usage v
+      - RCON_PASSWORD=
       - TZ=America/Chicago
     volumes:
       # Read-only - this container only ever tails the log, never writes

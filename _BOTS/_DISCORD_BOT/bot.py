@@ -13,12 +13,12 @@ CONFIG_PATH = "/discordsrv-config.yml"
 # Please paste your guild id below for use
 GUILD_ID = 
 
-# Populate the following two dictionaries with 'role_name':role_id key:values if desired
+# Populate the following two dictionaries with "role_name":role_id key:values if desired
 MAJOR_ROLES = {
 
 }
 YEAR_ROLES = {
-    
+
 }
 
 
