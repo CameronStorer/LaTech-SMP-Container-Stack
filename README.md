@@ -1,7 +1,7 @@
 # LaTech SMP Technology Stack
 
 
-| **Recommended Plugins:** |
+| ## Recommended Plugins: |
 | ------------------------ |
 | AntiSeedCracker |
 | ChestShop |
