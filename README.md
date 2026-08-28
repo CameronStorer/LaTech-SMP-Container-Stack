@@ -29,36 +29,38 @@ Once the container's successfully running, simply launch the chosen Minecraft ve
 Noticibly, there is a commented block in the ``docker-compose.yml`` file 
 
 
+## Plugins
 
+For the most optimal vanilla survival experience, I suggest installing these mods on your server to prevent undesired greifing, prevent hacking, and protect your world. There are also plugins listed here that add functional **economy** and **auction house** systems.
 
-| **Recommended Plugins:** |
-| ------------------------ |
-| AntiSeedCracker |
-| ChestShop |
-| Chunky |
-| CoreProtect |
-| DailyReward |
-| DiscordSRV |
-| DP-GUIShop |
-| DPP-Core |
-| DriveBackupV2 |
-| EssentialsX |
-| Floodgate-Spigot |
-| Geyser-Spigot |
-| GrimAC |
-| LandClaimPlugin |
-| LuckPerms |
-| NexusAuctionHouse |
-| NexusCore |
-| Orebfuscator |
-| PlaceholderAPI |
-| PlayerStats |
-| ProtocolLib |
-| Spark |
-| TAB |
-| Vault |
-| ViaBackwards |
-| ViaVersion |
-| voicechat |
-| WorldEdit |
-| WorldGuard |
+| **Recommended Plugins:**     |
+| ------------------------ | - |
+| AntiSeedCracker | Attempt to prevent player seed detection |
+| ChestShop | Required by other plugins |
+| Chunky | Preload chunks of your world |
+| CoreProtect | Protect your world with detailed player action history |
+| DailyReward | Add daily reward system |
+| DiscordSRV | Add discord channel integrations 
+| DP-GUIShop | Create simple GUI-enabled shops |
+| DPP-Core | Required by other plugins |
+| DriveBackupV2 | Perpetually back up your server |
+| EssentialsX | Helpful commands |
+| Floodgate-Spigot | Bedrock support plugin |
+| Geyser-Spigot | Bedrock support plugin |
+| GrimAC | Anti-cheat |
+| LandClaimPlugin | Allow players to claim land |
+| LuckPerms | Better control of player-command-authority |
+| NexusAuctionHouse | Add an auction house |
+| NexusCore | Other plugin requirement |
+| Orebfuscator | Prevent X-raying |
+| PlaceholderAPI | Other plugin requirement |
+| PlayerStats | Obtain detailed player statistics |
+| ProtocolLib | Other plugin requirement |
+| Spark | Other plugin requirement |
+| TAB | Other plugin requirement |
+| Vault | Other plugin requirement |
+| ViaBackwards | Add support for older Minecraft versions |
+| ViaVersion | Add support for newer Minecraft versions |
+| voicechat | Support proximity chat |
+| WorldEdit | Enable Easy world manipulation |
+| WorldGuard | Guard portions of your world |
