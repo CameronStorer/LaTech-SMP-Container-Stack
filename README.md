@@ -1,6 +1,8 @@
 # LaTech SMP Container Stack
 
-The full docker container stack for the [Louisiana Tech University Minecraft sever](https://latechsmp.net). Containers available from this config include: 
+The full docker container stack for the [Louisiana Tech University Minecraft sever](https://latechsmp.net). 
+
+Containers available from this config include: 
 
 - Minecraft Server
 - Viaproxy (for multi-version compatibility + bedrock support)
